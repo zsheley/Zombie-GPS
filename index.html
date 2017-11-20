@@ -30,7 +30,7 @@
 
             zombie_map = new google.maps.Map(document.getElementById('zombie_map'), {
             zoom: 10,
-            center: {lat: 38.438702, lng: -80.482392}
+            center: {lat: 52.206727, lng: 0.124450}
         });
       
      for(var i=0; i < markers.length; i++){
@@ -38,7 +38,7 @@
        var marker_data = markers[i].trim();
        marker_data = marker_data.split(" ");
        var latitude = marker_data[0];
-var longitude = ?;
+var longitude = marker_position;
 var emoji = document.getElementById('icon_to_use').value;;
     var marker_position = new google.maps.LatLng(52.206727, 0.124450);   
       }
