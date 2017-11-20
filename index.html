@@ -15,6 +15,14 @@
   <body>
     My zombie map
 <div id="zombie_map"></div>
+    <form>
+      Select an emoji
+<select id="icon_to_use">
+  <option value="32px-Twemoji2_1f9df-200d-2640-fe0f.svg.png">Zombie</option>
+  <option value="Twemoji2_1f3e5.svg.png">Hospital</option>
+  <option value="32px-Emojione_2694.svg.png">Weapons</option>
+</select>
+</form>
     <script>
     var zombie_map;
     var all_markers = []
@@ -38,8 +46,8 @@
     var marker_data = markers[i].trim();
     marker_data = marker_data.split(" ");
     var latitude = marker_data[0];
-    var longitude = ?;
-    var emoji = ?;
+    var longitude = marker_data[1];
+    var emoji = document.getElementById('icon_to_use').value;
     var marker_position = new google.maps.LatLng(###, ###);
     var marker = new google.maps.Marker({
     position: marker_position,
